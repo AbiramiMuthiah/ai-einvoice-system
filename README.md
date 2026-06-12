@@ -2,272 +2,181 @@
 
 # AI E-Invoice System
 
-### Intelligent Invoice Management & Financial Workflow Automation Platform
+### Invoice Automation and Financial Analytics Platform
 
 <p align="center">
-  AI-powered e-invoice management system built with <strong>Flask</strong>, <strong>React</strong>, <strong>SQL</strong>, and modern dashboard technologies for automated invoice processing and analytics workflows.
+  A full-stack invoice management platform that automates invoice creation, tracks payment status, and provides operational analytics through a modern dashboard — built with Flask, TypeScript, and SQL.
 </p>
 
 <br/>
 
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
 <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask"/>
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
 <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react"/>
 <img src="https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql"/>
 <img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss"/>
-<img src="https://img.shields.io/badge/AI-Automation-purple?style=for-the-badge"/>
+
+![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)
 
 </div>
 
 ---
 
-# Overview
+## Overview
 
-AI E-Invoice System is a modern financial workflow automation platform designed to simplify invoice management, client billing, and operational analytics through AI-powered automation and dashboard systems.
+AI E-Invoice System is an invoice automation platform for managing client billing, tracking invoice status, and monitoring financial performance. It handles the full invoice lifecycle — from creation to payment tracking — with a clean operational dashboard for business analytics.
 
-The platform enables businesses to create invoices, manage clients, monitor invoice statuses, and streamline financial workflows using an intuitive full-stack dashboard architecture.
-
-This project combines full-stack engineering, automation systems, and modern financial dashboard design into a scalable enterprise-style application.
+Built with a Flask backend, TypeScript/React frontend, and SQL database, the system is designed to replace manual invoicing workflows with an automated, data-driven approach.
 
 ---
 
-# Core Features
+## Key Features
 
-## Invoice Management
-- Smart invoice creation system
-- Invoice editing and deletion
-- Vendor and client management
-- Due date tracking
-- Automated invoice organization
+### Invoice Management
 
-## Analytics Dashboard
-- Revenue monitoring
-- Invoice status tracking
-- Pending and paid invoice analytics
-- Financial summary cards
-- Search and filter functionality
+- Create, edit, and delete invoices
+- Vendor and client information management
+- Due date tracking and status updates (Pending / Paid / Overdue)
+- Invoice summary with automatic calculations
+- Search and filter across all invoices
 
-## AI & Automation
-- AI-powered invoice workflows
-- Intelligent financial processing
-- Automated dashboard insights
-- Workflow optimization system
+### Analytics Dashboard
 
-## Full-Stack Architecture
-- Flask backend system
-- React frontend dashboard
-- SQL database integration
-- REST API workflow
-- Modern responsive UI
+- Revenue overview and financial KPI cards
+- Invoice status breakdown (paid vs pending vs overdue)
+- Client-level billing summaries
+- Date range filtering for reports
+
+### Workflow Automation
+
+- Automated invoice numbering and organization
+- Status updates based on due dates
+- Bulk invoice management
 
 ---
 
-# Tech Stack
+## Screenshots
 
-| Category | Technologies |
-|---|---|
-| Backend | Python, Flask |
-| Frontend | React, JavaScript |
-| Database | SQL |
-| Styling | TailwindCSS |
-| AI / Automation | Workflow Automation |
-| Tools | VS Code, GitHub |
+### Dashboard Overview
+
+![Dashboard](assets/dashboard-overview.png)
+
+### Create Invoice
+
+![Create Invoice](assets/create-invoice.png)
 
 ---
 
-# Project Architecture
+## System Architecture
 
-```text
-Frontend Dashboard
-        ↓
-React Components
-        ↓
-Flask Backend API
-        ↓
-Invoice Processing Engine
-        ↓
-SQL Database
-        ↓
-Analytics & Automation
+```
+Frontend (TypeScript / React)
+           |
+   Flask Backend API
+           |
+   Invoice Processing Engine
+           |
+   SQL Database
+   (Invoices, Clients, Vendors, Payments)
+           |
+   Analytics Dashboard
 ```
 
 ---
 
-# Screenshots
+## Tech Stack
 
-## Dashboard Overview
-
-![dashboard](assets/dashboard-overview.png)
-
-### Features Displayed
-- Revenue analytics
-- Invoice tracking
-- Search and filtering system
-- Dashboard KPI cards
-- Invoice management table
+| Category | Technologies                   |
+| -------- | ------------------------------ |
+| Backend  | Python, Flask                  |
+| Frontend | TypeScript, React, TailwindCSS |
+| Database | SQL                            |
+| Tools    | GitHub, VS Code                |
 
 ---
 
-## Invoice Creation System
+## Getting Started
 
-![invoice-create](assets/create-invoice.png)
+### Prerequisites
 
-### Features Displayed
-- Vendor information form
-- Client information system
-- Invoice summary calculations
-- Due date management
-- Automated invoice workflow
+- Python 3.9+
+- Node.js 18+
 
----
-
-# System Workflow
-
-1. User logs into dashboard  
-2. Invoice details are entered  
-3. Vendor and client information processed  
-4. Invoice generated automatically  
-5. Data stored inside SQL database  
-6. Dashboard analytics updated  
-7. Invoice management and tracking performed  
-
----
-
-# Installation Guide
-
-## Clone Repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/AbiramiMuthiah/ai-einvoice-system.git
-
 cd ai-einvoice-system
 ```
 
----
-
-# Backend Setup
-
-## Create Virtual Environment
+### 2. Backend Setup
 
 ```bash
+cd backend
 python -m venv venv
-```
 
----
-
-## Activate Environment
-
-### Windows
-
-```bash
+# Windows
 venv\Scripts\activate
-```
 
----
+# Mac/Linux
+source venv/bin/activate
 
-## Install Dependencies
-
-```bash
 pip install -r requirements.txt
-```
-
----
-
-## Run Backend
-
-```bash
 python app.py
+# Runs on http://127.0.0.1:5000
 ```
 
-Backend runs on:
-
-```text
-http://127.0.0.1:5000
-```
-
----
-
-# Frontend Setup
-
-## Open Another Terminal
+### 3. Frontend Setup
 
 ```bash
 cd frontend
-```
-
----
-
-## Install Dependencies
-
-```bash
 npm install
-```
-
----
-
-## Run Frontend
-
-```bash
 npm run dev
-```
-
-Frontend runs on:
-
-```text
-http://localhost:3000
+# Runs on http://localhost:3000
 ```
 
 ---
 
-# Future Improvements
+## Project Structure
 
-- AI-powered receipt scanning
-- OCR invoice extraction
+```
+ai-einvoice-system/
+├── backend/               # Flask API
+│   ├── app.py             # Main Flask app
+│   └── requirements.txt
+├── frontend/              # TypeScript/React frontend
+│   ├── src/
+│   └── package.json
+├── assets/                # Screenshots
+│   ├── dashboard-overview.png
+│   └── create-invoice.png
+└── README.md
+```
+
+---
+
+## Future Improvements
+
+- OCR-based receipt and invoice scanning
 - Automated tax calculation
-- Real-time financial analytics
-- Multi-user authentication
-- Cloud deployment pipeline
-- AI financial insights system
-- Email invoice automation
-- PDF invoice generation
-- Enterprise SaaS architecture
+- PDF invoice generation and email delivery
+- Multi-user authentication with role-based access
+- Cloud deployment on AWS EC2
+- Real-time financial analytics and forecasting
 
 ---
 
-# Project Highlights
+## Author
 
-- AI-powered invoice automation platform
-- Enterprise-style dashboard UI
-- Full-stack financial workflow system
-- Intelligent invoice management
-- Operational analytics dashboard
-- Automated invoice processing pipeline
-- Scalable financial architecture
-- Modern SaaS-inspired design
+**Abirami Muthiah**  
+Applied AI Engineer | Full-Stack Development | Data Science
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-abiramimuthiah--portfolio.vercel.app-blue?style=flat-square)](https://abiramimuthiah-portfolio.vercel.app)
+[![GitHub](https://img.shields.io/badge/GitHub-AbiramiMuthiah-181717?style=flat-square&logo=github)](https://github.com/AbiramiMuthiah)
 
 ---
 
-# Author
+## License
 
-## Abirami Muthiah
-
-Applied AI Engineer | Full-Stack AI Developer
-
-### Specializations
-
-- AI Workflow Automation
-- Full-Stack Development
-- Financial Systems Engineering
-- Dashboard Analytics
-- Applied AI Systems
-- Machine Learning
-
-GitHub:
-
-https://github.com/AbiramiMuthiah
-
----
-
-# License
-
-Licensed under the MIT License.
+Licensed under the [MIT License](LICENSE).
